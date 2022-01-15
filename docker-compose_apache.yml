@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  web:
+    environment:
+    - APACHE_RUN_USER=#1000
+    build:
+      context: ./docker/web/apache
+    ports:
+    - 10000:80
+    volumes:
+    - ./:/var/www/html:cached
+
+  database:
+    image: mariadb
+    restart: always
+    ports:
+    - 33061:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - ./docker/database:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80

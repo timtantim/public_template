@@ -1,0 +1,43 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.2.1",
+        "alpinejs": "^2.7.3",
+        "autoprefixer": "^10.1.0",
+        "axios": "^0.21",
+        "bootstrap-fileinput": "^5.2.6",
+        "bootstrap-select": "^1.13.18",
+        "bs-stepper": "^1.7.0",
+        "datatables.net": "^1.11.3",
+        "datatables.net-bs4": "^1.11.3",
+        "datatables.net-buttons": "^2.0.1",
+        "fa-icons": "^0.2.0",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.6.0",
+        "jquery-ui-dist": "^1.12.1",
+        "jszip": "^3.7.1",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "popper.js": "^1.16.1",
+        "postcss": "^8.2.1",
+        "postcss-import": "^12.0.1",
+        "sweetalert2": "^11.1.7",
+        "tailwindcss": "^2.0.2",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.0",
+        "bootstrap-validate": "^2.2.0",
+        "vue": "^2.6.14"
+    }
+}

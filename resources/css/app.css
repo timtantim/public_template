@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+ 
+@import 'bootstrap-fileinput/css/fileinput.min.css';
+@import 'jquery-ui-dist/jquery-ui.css';
+@import 'bs-stepper/dist/css/bs-stepper.min.css';
+@import 'font-awesome/css/font-awesome.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '../css/sidebar.css';
+@import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+@import 'bootstrap-select/dist/css/bootstrap-select.min.css'; 
