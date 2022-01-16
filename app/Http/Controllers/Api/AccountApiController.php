@@ -93,7 +93,7 @@ class AccountApiController extends Controller
     public function verify_code(Request $request,Generate_Verify_Code $action)
     {
         // return $action->handle(6,Auth::user()->id,Auth::user()->email);
-        return $action->handle(6,1,'yutengchen0116@gmail.com');
+        return $action->handle(6,1,'youremail@gmail.com');
     }
 
 

@@ -28,11 +28,9 @@ class VerifyCode extends Mailable
      */
     public function build()
     {
-        return $this->from('yutengchen0116@gmail.com')
+        return $this->from('youremail@gmail.com')
                     ->subject('Verify Code')
                     ->markdown('emails.verify_code')
                     ->with('content',$this->content);
-        // return $this->markdown('emails.verify_code') //pass here your email blade file
-        // ->with('content',$this->content);
     }
 }
