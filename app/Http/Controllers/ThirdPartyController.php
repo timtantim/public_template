@@ -28,11 +28,11 @@ class ThirdPartyController extends Controller
         //     strlen($state) > 0 && $state === $request->state,
         //     InvalidArgumentException::class
         // );
-        $response = Http::asForm()->post(url('https://www.coinbase.com/oauth/token'), [
+        $response = Http::asForm()->post(url('https://www.thirdparty.com/oauth/token'), [
             'grant_type' => 'authorization_code',
-            'client_id' => 'ff6597aef98a6120d62cf14cd6ac2257d276cea7f592259b325d89ef380e1522',
-            'client_secret' => '9ea1f7ba6ec28be7208da769ce3ad9d00bebe29ba5f31f08f99b51b07ec69c73',
-            'redirect_uri' => 'http://ec2-54-254-86-34.ap-southeast-1.compute.amazonaws.com/E-Wallet/third_party_callback',
+            'client_id' => '',
+            'client_secret' => '',
+            'redirect_uri' => '',
             // 'code_verifier' => $codeVerifier,
             'code' => $code
         ]);
@@ -63,16 +63,12 @@ class ThirdPartyController extends Controller
         , '='), '+/', '-_');
 
         $query = http_build_query([
-            'client_id' => 'ff6597aef98a6120d62cf14cd6ac2257d276cea7f592259b325d89ef380e1522',
-            'redirect_uri' => 'http://ec2-54-254-86-34.ap-southeast-1.compute.amazonaws.com/E-Wallet/third_party_callback',
+            'client_id' => '',
+            'redirect_uri' => '',
             'response_type' => 'code',
             'scope' => 'wallet:accounts:read',
-            // 'state' => $state,
-            // 'code_challenge' => $codeChallenge,
-            // 'code_challenge_method' => 'S256',
         ]);
-        return redirect('https://www.coinbase.com/oauth/authorize?'.$query);
-        // return redirect('https://www.coinbase.com/oauth/authorize?client_id=ff6597aef98a6120d62cf14cd6ac2257d276cea7f592259b325d89ef380e1522&redirect_uri=http%3A%2F%2Fec2-54-254-86-34.ap-southeast-1.compute.amazonaws.com%2FE-Wallet%2Fthird_party_callback&response_type=code&scope=wallet%3Auser%3Aread');
+        return redirect('https://www.thirdparty.com/oauth/authorize?'.$query);
     }
     
 }
