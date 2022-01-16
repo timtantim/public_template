@@ -12,7 +12,6 @@ use App\Models\Record;
 use App\Models\User;
 use App\Notifications\SendNotification;
 use App\Actions\Generate_Verify_Code;
-use App\Actions\Check_Verify_Code;
 use Auth;
 use DB;
 use Illuminate\Http\Request;
@@ -97,20 +96,6 @@ class AccountApiController extends Controller
         return $action->handle(6,1,'yutengchen0116@gmail.com');
     }
 
-    /**
-     * check_verify_code
-     *
-     * 檢查驗證碼
-     *
-     * @authenticated
-     * @response 400 scenario="Service is unhealthy" {"status": "down", "services": {"database": "up", "redis": "down"}}
-     * @responseField API 狀態 啟用
-     */
-    public function check_verify_code(CheckVerifyRequest $request,Check_Verify_Code $action)
-    {
-        // return $action->handle($request->cryptocurrency,Auth::user()->id);
-        return $action->handle($request->cryptocurrency,1);
-    }
 
     /**
      * action_record

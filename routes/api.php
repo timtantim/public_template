@@ -62,7 +62,6 @@ Route::middleware('auth:api')->group(function () {
     //換匯
     Route::post('currency_exchange', [CurrenciesApiController::class, 'currency_exchange']);
 });
-Route::post('/check_verify_code', [AccountApiController::class, 'check_verify_code']);
 Route::post('verify_code', [AccountApiController::class, 'verify_code']);
 
 //Api 檢測IP 白名單
